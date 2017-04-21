@@ -3,10 +3,10 @@
 
   angular.module('firstApp', [])
 
-  .controller('myFirstController', myController);
-  myController.$inject = ['$scope'];
+  .controller('LunchCheckController', LunchCheckController);
+  LunchCheckController.$inject = ['$scope'];
 
-  function myController($scope) {
+  function LunchCheckController($scope) {
     $scope.inputValue = "";
     $scope.msg = "";
     $scope.displayMsg = function () {
@@ -14,7 +14,7 @@
     }
     function countFoodItems(foodItems) {
       if (foodItems == "") {
-        return "Please enter value first!";
+        return "Please enter data first!";
       }
       var arrayOfFoodItems = foodItems.split(",");
       for (var i = 0; i < arrayOfFoodItems.length; i++) {
