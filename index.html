@@ -9,8 +9,13 @@
   <body>
 
     <div ng-controller="myFirstController">
-      {{name}}
-      <h1>Welcome to my first page</h1> {{name}}
+
+      <h1>Welcome to my first page</h1>
+      <input type="text" ng-model="inputValue">
+      <div>
+        {{msg}}
+      </div>
+      <input type="button" name="checkButton" value="Check if too much" ng-click="displayMsg()">
 
     </div>
   </body>
